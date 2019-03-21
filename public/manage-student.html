@@ -75,7 +75,7 @@ $(document).ready(function(){
     <ul class="row">
       <ul>
               <li><a href="./manage-Teacher.html">จัดการอาจารย์</a></li>
-              <li><a href="#">จัดการนิสิต</a></li>
+              <li><a href="./manage-student.html">จัดการนิสิต</a></li>
               <li><a href="#">จัดการเจ้าหน้าที่</a></li>
       </ul>
   </ul>
@@ -96,7 +96,7 @@ $(document).ready(function(){
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-            <h2>จัดการอาจารย์</h2>
+            <h2>จัดการนิสิต</h2>
                     </div>
           <div class="col-sm-6">
             <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>เพิ่ม</span></a>
@@ -109,7 +109,7 @@ $(document).ready(function(){
                     <tr>
            
                         <th>ลำดับ</th>
-                        <th>รหัส</th>
+                        <th>รหัสนิสิต</th>
                         <th>ชื่อ</th>
                        <th>นามสกุล</th>
                         <th>Actions</th>
@@ -143,7 +143,7 @@ $(document).ready(function(){
           </div>
           <div class="modal-body">     
             <div class="form-group">
-                <label>รหัส</label>
+                <label>รหัสนิสิต</label>
                 <input type="text" id="addId" class="form-control" value = "" required>
             </div>     
             <div class="form-group">
@@ -165,7 +165,7 @@ $(document).ready(function(){
           </div>
           <div class="modal-footer">
             <a type="button" class="btn btn-default" href="#" data-dismiss="modal">Cancel</a>
-            <a type="submit" onclick="insertTeacher()" class="btn btn-success">Add</a>
+            <a type="submit" onclick="insertNisit()" class="btn btn-success">Add</a>
           </div>
         </form>
       </div>
@@ -188,19 +188,11 @@ $(document).ready(function(){
               <label>นามสกุล</label>
               <input type="text" id="editLname" class="form-control" value = "" required>
             </div>        
-            <!-- <div class="form-group">
-              <label>Username</label>
-              <input type="text" id="editUser" class="form-control" value = "" required>
-            </div>       
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" id="editPass" class="form-control" value = "" required>
-            </div>        -->
           </div>
           <div class="modal-footer">
              
             <a type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</a>
-            <a type="submit" onclick="editTeacher()" class="btn btn-info">บันทึก</a>
+            <a type="submit" onclick="editNisit()" class="btn btn-info">บันทึก</a>
           </div>
         </form>
       </div>
@@ -212,16 +204,16 @@ $(document).ready(function(){
       <div class="modal-content">
         <form>
           <div class="modal-header">            
-            <h4 class="modal-title">ลบข้อมูลอาจารย์</h4>
+            <h4 class="modal-title">ลบข้อมูลนิสิต</h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
           </div>
           <div class="modal-body">          
-            <p>คุณต้องการลบข้อมูลอาจารย์ใช่หรือไม่</p>
+            <p>คุณต้องการลบข้อมูลนิสิตใช่หรือไม่</p>
             <p class="text-warning"><small></small></p>
           </div>
           <div class="modal-footer">
             <a  type="button" class="btn btn-default" href="#" data-dismiss="modal">Cancel</a>
-            <a  type="submit" class="btn btn-danger" onclick="deleteTeacher()" href="#" >Delate</a>
+            <a  type="submit" class="btn btn-danger" onclick="deleteNisit()"  >Delate</a>
           </div>
         </form>
 </div>
