@@ -1,7 +1,6 @@
 {
   "name": "ooad",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +15,15 @@
     "mongodb": "^3.1.13",
     "nodemon": "^1.18.10",
     "path": "^0.12.7"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aromaton41/ooad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aromaton41/ooad/issues"
+  },
+  "homepage": "https://github.com/aromaton41/ooad#readme",
+  "description": ""
 }
