@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+    <script>
+        (function () {
+            'use strict'
+
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            }, false)
+        }())
+    </script>
+
+
+
+
+    <title>ระบบจัดการการสอบ คณะวิทยาการสารสนเทศ</title>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row">
+        <a class="navbar-brand" href="#">ระบบจัดการการสอบ คณะวิทยาการสารสนเทศ</a>
+
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link"
+                    href="https://reg.buu.ac.th/">ระบบบริการการศึกษามหาวิทยาลัยบูรพา</a></li>
+            <li class="nav-item"><a class="nav-link"
+                    href="https://www.informatics.buu.ac.th/2018/">เว็บไซค์คณะวิทยากรสารสนเทศ</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://buu.ac.th/">เว็บไซค์มหาวิทยาลัยบูรพา</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active"> เมนูหลัก </a>
+                <a href="./room.html" class="list-group-item list-group-item-action">จัดการสอบ</a>
+                <ul class="row">
+                    <ul>
+                        <li><a href="./room.html">เพิ่มข้อมูลห้อง</a></li>
+                        <li><a href="">จัดการห้องสอบ</a></li>
+                        <li><a href="">พิมพ์ใบเซ็นชื่อ</a></li>
+                    </ul>
+                </ul>
+                <a href="#" class="list-group-item list-group-item-action">จัดการบุคคล</a>
+                <ul class="row">
+                    <ul>
+                        <li><a href="./manage-Teacher.html">จัดการอาจารย์</a></li>
+                        <li><a href="./manage-student.html">จัดการนิสิต</a></li>
+                        <li><a href="./manage-admin.html">จัดการเจ้าหน้าที่</a></li>
+                    </ul>
+                </ul>
+                <a href="#" class="list-group-item list-group-item-action">จัดการรายวิชา</a>
+                <a href="#" class="list-group-item list-group-item-action">บันทึกสถานะเข้าสอบนิสิต</a>
+                <a href="#" class="list-group-item list-group-item-action">ออกจากระบบ
+                </a>
+            </div>
+        </div><br>
+
+        <div class="col-md-8 order-md-1 py-5">
+            <h4 class="mb-3">เพิ่มข้อมูลตึก</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">ชื่อตึก</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="lastName">แถว</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4 class="mb-3">เพิ่มข้อมูลห้อง</h4>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">ห้อง</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                    <label>ประเภท</label>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
+                                required>
+                            <label class="custom-control-label" for="credit">Lab</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="debit">Lacture</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">ชั้นที่</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="lastName">ตึก</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4 class="mb-3">เพิ่มข้อมูลห้อง</h4>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">แถว</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="lastName">คอลัม</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            กรุณากรอกให้ถูกต้อง
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">บันทึก</button>
+            </form>
+        </div>
+</body>
+
+</html>

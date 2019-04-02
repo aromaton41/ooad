@@ -286,3 +286,6 @@ span.psw {
   .modal form label {
     font-weight: normal;
   }
+  .row{
+    font-size: 16px;
+  }
