@@ -508,3 +508,44 @@ function deleteAdmin() {
 }
 
 //  ------------------------------------- end admin-------------------------------------------//
+
+//  ------------------------------------- Room-------------------------------------------//
+
+function addRoom(){
+    var room = $("#room").val();
+    var floor = $("#floor").val();
+    var building = $("#building").val();
+    var row = $("#row").val();
+    var col = $("#col").val();
+
+    var data ={
+        room:room,
+        floor:floor,
+        building:building,
+        row:row,
+        col:col,
+    }
+    console.log(data)
+
+    $.ajax({
+        type: "POST",
+        contentType: "application/json",
+        url: "http://localhost:3000/home/room",
+        data: JSON.stringify(data),
+        dataType: 'json',
+        success: function (respones) {
+            var result = JSON.stringify(respones);
+            console.log(result);
+            if (JSON.stringify(respones) == 'true') {
+                alert("insert Successful!")
+                window.location.reload();
+
+            } else {
+                alert("insert Incorrect!");
+            }
+        },
+        error: function (e) {
+            console.log("ERROR: ", e);
+        }
+    });
+}
